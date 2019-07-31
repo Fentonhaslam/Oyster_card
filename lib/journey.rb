@@ -1,13 +1,13 @@
 class Journey
   PENALTY_FARE = 1
 
-  def initialize
+  def initialize(station,zone)
     @complete_journey = false
   end
 
   def complete?
     @complete_journey
-  end
+    end
 
   def fare(fare = PENALTY_FARE)
     fare
