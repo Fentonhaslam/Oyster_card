@@ -2,6 +2,10 @@ require "journey"
 
 describe Journey do
   let(:station) { double :station, zone: 1 }
+  let(:entry_station) { double :station }
+  let(:exit_station) { double :station }
+  let(:journey) { { entry_station: entry_station, exit_station: exit_station } }
+  subject { described_class.new(journey) }
   it "knows if journey is not complete" do
     expect(subject).not_to be_complete
   end
