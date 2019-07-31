@@ -1,7 +1,7 @@
 require "station"
 
 describe Station do
-  subject { Station.new("Oxford Circus", 1) }
+  subject { described_class.new("Oxford Circus", 1) }
 
   it "has a name" do
     expect(subject.name).to eq ("Oxford Circus")
