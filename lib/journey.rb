@@ -1,7 +1,12 @@
 class Journey
-  PENALTY_FARE = 5
+  PENALTY_FARE = 1
+
+  def initialize
+    @complete_journey = false
+  end
+
   def complete?
-    false
+    @complete_journey
   end
 
   def fare(fare = PENALTY_FARE)
@@ -9,6 +14,7 @@ class Journey
   end
 
   def finish(station)
+    @complete_journey = true
     self
   end
 
